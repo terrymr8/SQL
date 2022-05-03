@@ -1,0 +1,28 @@
+--Creating a clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, size TEXT, price INTEGER);
+
+INSERT INTO store VALUES (1, "Red Hoodie", "Mens", "M", 39.99);
+INSERT INTO store VALUES (2, "Blue Jeans", "Mens", "S", 29.99);
+INSERT INTO store VALUES (3, "Black Shorts","Mens", "XL", 19.99);
+INSERT INTO store VALUES (4, "White T-Shirt", "Mens", "L", 9.99);
+INSERT INTO store VALUES (5, "Graphic Tee", "Mens", "XXL", 11.99);
+INSERT INTO store VALUES (6, "Pink dress", "Womens", "L", 19.99);
+INSERT INTO store VALUES (7, "White Blouse", "Womens", "S", 6.99);
+INSERT INTO store VALUES (8, "White Jeans", "Womens", "XL", 24.99);
+INSERT INTO store VALUES (9, "Floral Skirt", "Womens", "M", 17.99);
+INSERT INTO store VALUES (10, "Jean Shorts", "Womens", "XS", 10.99);
+INSERT INTO store VALUES (11, "Blue shirt", "Kids", "XS", 5.99);
+INSERT INTO store VALUES (12, "Purple shirt", "Kids", "S", 5.99);
+INSERT INTO store VALUES (13, "Graphic Tee", "Kids", "M", 7.99);
+INSERT INTO store VALUES (14, "Blue Jeans", "Kids", "L", 9.99);
+INSERT INTO store VALUES (15, "Green Shorts", "Kids", "XL", 8.99);
+
+--display the database ordered by price
+SELECT * FROM store
+ORDER BY price;
+
+--what is the avg price of items in the Women's section? 
+SELECT AVG(price) "avg bulk item price"
+FROM store
+where section='Womens';
